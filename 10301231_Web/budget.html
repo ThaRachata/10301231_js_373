@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>บัญชีรายรับ-รายจ่าย</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/js/budgetform.js" defer></script> <!-- เขียนข้างบนต้องเติม defer -->
+</head>
+<body>
+    <div class="container-layout">
+        <div class="left-panel">
+            <form id="budget-form">
+                <label for="name">ชื่อรายการ:</label>
+                <input type="text" id="name" name="name" required maxlength="50"><br><br>
+
+                <label for="amount">จำนวนเงิน:</label>
+                <input type="number" id="amount" name="amount" required min="0"><br><br>
+
+                <label for="date">วันที่:</label>
+                <input type="date" id="date" name="date" required><br><br>
+
+                <label for="time">เวลา:</label>
+                <input type="time" id="time" name="time" required><br><br>
+
+                <label for="reason">ประเภทรายการ รายรับ/รายจ่าย :</label>
+                <select id="reason" name="reason" required>
+                    <option value="">--กรุณาเลือก--</option>
+                    <option value="รายรับ">รายรับ</option>
+                    <option value="รายจ่าย">รายจ่าย</option>
+                </select><br><br>
+
+                <input type="submit" value="เพิ่มรายการ" id="submit-button">
+                <input type="reset" value="ยกเลิก" id="reset-button"> <br><br>
+
+            </form>
+        </div>
+        <div class="right-panel">
+            <div>แสดงรายรับทั้งหมด
+                <ul id="income-list">
+                    
+                </ul>
+                <p id="income-description">ยอดรายรับ: <span id="income-amount">0</span> บาท</p>
+            </div>
+
+            <div>แสดงรายจ่ายทั้งหมด
+                <ul id="expense-list">
+                    
+                </ul>
+                <p id="expense-description">ยอดรายจ่าย: <span id="expense-amount">0</span> บาท</p>
+            </div>
+
+            <div>แสดงยอดคงเหลือ
+                <ul id="balance-list">
+                    
+                </ul>
+                <p id="total-description">ยอดคงเหลือ: <span id="total-amount">0</span> บาท</p>
+            </div>
+        </div>
+    </div>
+</body> 
+</html>

@@ -1,0 +1,129 @@
+/* จัดพื้นหลังและฟอนต์ */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* ฟอร์มกรอกข้อมูล */
+#budget-form {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+}
+
+/* ช่องกรอกข้อมูล (Input) */
+input[type="text"], 
+input[type="number"], 
+input[type="date"], 
+input[type="time"], 
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+/* ปุ่มกด */
+input[type="submit"], 
+input[type="reset"] {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#submit-button {
+    background-color: #4CAF50;
+    color: white;
+}
+#submit-button:hover { background-color: #45a049; }
+
+#reset-button {
+    background-color: #f44336;
+    color: white;
+    margin-left: 10px;
+}
+#reset-button:hover { background-color: #d32f2f; }
+
+/* ส่วนแสดงรายการ (List) */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: #fff;
+    margin-bottom: 8px;
+    padding: 12px;
+    border-radius: 5px;
+    border-left: 5px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li button {
+    background-color: #b92929;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+li button:hover { background-color: #f40303; }
+
+/* ส่วนสรุปยอด */
+div {
+    background-color: #ffffff;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: right;
+    margin: 10px 0 0 0;
+    padding-top: 10px;
+    border-top: 2px dashed #eee;
+}
+
+#income-description { color: #4CAF50; }
+#expense-description { color: #f44336; }
+#total-description { color: #2196F3; font-size: 1.4em; }
+
+/* แบ่งคอลัมน์ (ซ้าย-ขวา) */
+.container-layout {
+    display: flex; /* เรียงกันแนวนอน */
+    gap: 30px; /* ระยะห่างระหว่างกล่องซ้ายกับขวา */
+    align-items: flex-start; /* ให้กล่องเรียงชิดบน */
+}
+
+/* กำหนดขนาดกล่องฝั่งซ้าย */
+.left-panel {
+    flex: 1; /* 1 ส่วน */
+    min-width: 300px; 
+}
+
+/* กำหนดขนาดกล่องฝั่งขวา */
+.right-panel {
+    flex: 2; /*  2 ส่วน */
+    min-width: 300px;
+}
